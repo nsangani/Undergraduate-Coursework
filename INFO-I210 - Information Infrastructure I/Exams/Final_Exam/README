@@ -1,0 +1,64 @@
+The midterm combines the Python concepts we have learned throughout the semester to investigate the xvirus.csv file and report on it using healthcare statistical formulas. These formulas are basic algebraic formulas listed below for your reference. This is not a group project.
+
+Ratio = x: y
+remember to reduce so that y is always 1. Do this by dividing x by y
+Rates = (# of cases(or events) during time period / total population at risk during period) * 100
+Note that not all rates are multiplied by 100, you multiply by the number you are reporting the rate on. IE in the example above it would be cases per 100. Multiple by 100,000 for cases per 100,000.
+Length of Stay (LOS) = Admission date - Discharge date
+Average Length of Stay (ALOS) = total length of stays /   total number of discharges
+Overall Attack Rate = (Total number of new cases / total population)*100
+Reminder that rates are multiplied by the reported statistic as above
+Incidence Proportion Rate = (Number of new cases of disease or injury during specified period / Size of population at start of period)*100
+Secondary Attack Rate = Number of cases among contacts of primary cases / Total number of contacts
+Maternal Mortality Rate (MMR) =(# of deaths attributed to maternal conditions / # live births during the period)*100,000
+Case Fatality Rate = (# patients who died of a disease / # people who have the disease) * 100,000
+ 
+
+Introduction to the problem:
+
+You are serving on a volunteer mission to improve healthcare infrastructure on the remove island of Imadethisupopia. The island is hit with an unusual strain of the X virus.
+
+Imadethisupopia island has a population of 981. Due to how small the island is, everyone lives in a single, large communal housing system.
+
+Initial onset of XVIRUS occurs on January 12, 2030, sending many to your clinic.
+
+XVIRUS has an incubation period of about 1 month, and you had a new set of patients in February to treat.
+
+Create a Python program that executes each exercise in sequence.
+
+ 
+
+Exercise 1 - 30 points:
+
+Create a new DBM database. Then create a function that reads in a csv and adds a row to the database where the keys are the first column and the value is a dictionary where each key is the column header and the value is the row column value.
+
+Exercise 2 - 30 points:
+
+Create a new function that uses your database to calculate the overall attack rate of XVIRUS for the population, and prints the attack rate.
+
+Exercise 3 - 30 points:
+
+Create a new function using your database to calculate the secondary attack rate of XVIRUS for the population, and prints it. #for submissions after 4/2, please use 200 for total number of contacts
+
+Exercise 4 - 30 points:
+
+Fortunately, the disease was contained; no one else contacts the XVIRUS. Create a function to calculate how many people died from XVIRUS and calculate the case fatality rate (per 100,000) for XVIRUS. Print both.
+
+Exercise 5 - 40 points:
+
+Create a function that calculates ratios. IE the input (210, 199) output would be '1.055: 1'.
+
+Then create functions that use your ratio function and database to answer the following questions, and prints each answer:
+
+What is the ratio between male patients and female patients for XVIRUS?
+What is the ratio between XVIRUS patients in January and XVIRUS patients in February?
+What is the ratio between YVIRUS and ZVIRUS over all months in our data?
+Exercise 6 - 30 points:
+
+Create a function that takes in a list of tuple pairs (start date, end date), and outputs the average length of stay for that list. For example, the set [(3/8/2020, 3/9/2020),(3/6/2020, 3/9/2020)] would return an ALOS of 2 days.
+
+Use this function and your database to answer the following questions, and print the answers:
+
+What is the average length of stay for all patients that did not die?
+
+What is the average length of stay for all XVIRUS patients that did not die?
