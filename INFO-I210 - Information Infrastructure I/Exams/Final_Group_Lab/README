@@ -1,0 +1,42 @@
+Residents are MDs that are undergoing an apprenticeship to be licensed in a specific specialty. In radiology, this process takes 4 years. Each resident must complete a minimum number of exams in each variety of radiology. The required minimums are listed in this document.
+
+We are looking at a sample export of 25 residents productivity for the 2019 academic year (July 2018-June 2019). We have 4 tables, Each table name includes a hyperlink to a CSV of the table data. The fields and relationships are described below.
+
+Studies
+priorities - lower is higher priority (IE 0 is stroke, 1 is emergent, 2 is stat...5 is very low priority)
+exam Code - the unique code used internally to order a specific exam
+procedure name - descriptive version of the Exam Code
+trainee Name - name of the resident
+finalized - Date Time stamp of when the radiologist finished the exam
+modality_id - the key that links to the modalities table
+organization_id - the key that links to the organizations table
+
+Organizations
+id - unique row identifier
+organization_code - code that tells you what facility the exam was completed at
+
+Modalities
+id - unique row identifier
+modality_code - code that tells you what modality (IE XRAY or MRI) was used to acquire images
+exam_to_cpt
+exam_code - the unique code used internally to order a specific exam
+cpt - current procedure terminology, the federally issued code for the exam
+rvu - relative value unit - how much value is derived from a specific cpt
+
+Part 1 - 30 points
+
+Generate an ERD of the tables, and review with John Burns.
+Load the data into your SQL database using your preferred method.
+Connect to the SQL database using Python
+Part 2 - 30 points
+
+Generate a report where the columns are the Case Log Categories, the rows are the Residents, and the total number of exams are the table values.
+Generate another report where the columns are the Case Log Categories, the rows are the Residents, and the percentage of exams/required are the table values.
+Generate another report where the columns are the Case Log Categories, the rows are the Residents, and the table values say 'Met' if the percentage is at or above 100, and shows the number of exams remaining to be completed otherwise.
+Part 3 - 40 points
+
+For the items below, it is up to your group to decide how best to visualize these requests. The answers for each of these must be in graph form.
+
+Graph each Case Log Category total completed vs remaining for the entire group overall. Each Case Log Category should be represented separately on your graph.
+Graph the amount of RVU's completed, stratified by those that count towards required cases and those that don't, by each resident (separately)
+Graph the ratio of required/not required overall by organization_code. Identify the site that has the highest ratio. Graph the ratio of required/not required for each Case Log Category for this site
